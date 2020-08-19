@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     modal: false,
     loading: true,
-    host: '192.168.1.100'
+    host: '192.168.1.100',
+    login: 0
   },
 
   mutations: {

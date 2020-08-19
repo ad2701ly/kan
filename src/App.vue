@@ -1,7 +1,7 @@
 <template>
   <v-ons-page id="app">
-    <NavigasiAtas/>
-    <div class="container">
+    <NavigasiAtas />
+    <div class="content">
       <router-view/>
     </div>
     <v-ons-modal :visible="this.$store.state.loading">
@@ -12,8 +12,9 @@
 </template>
 
 <script>
+import NavigasiAtas from './components/NavigasiAtas'
 export default {
-  components:{
+  components: {
     NavigasiAtas
   },
   data () {
@@ -67,5 +68,8 @@ export default {
 .isi{
   font-family: 'Nunito Sans', sans-serif;
   margin: 0.5em;
+}
+.page{
+  padding-top: 1em;
 }
 </style>

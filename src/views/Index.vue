@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'Vuex'
+import { mapMutations } from 'vuex'
 // @ is an alias to /src
 export default {
   name: 'Home',
@@ -34,7 +34,7 @@ export default {
   methods: {
     ...mapMutations(['LOADING_SYNC'])
   },
-  mounted(){
+  mounted () {
     this.LOADING_SYNC(false)
   }
 

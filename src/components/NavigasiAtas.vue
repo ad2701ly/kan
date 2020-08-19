@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page>
+
       <v-ons-toolbar>
       <div class="center">
         <v-ons-toolbar-button >
@@ -12,7 +12,7 @@
         </v-ons-toolbar-button>
       </div>
     </v-ons-toolbar>
-  </v-ons-page>
+
 </template>
 
 <script>
