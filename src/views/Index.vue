@@ -3,7 +3,7 @@
    
    <div class="background"></div>
     <div class="isi">
-      <p class="judul">MITRA CV. KIM</p>
+      <p class="judul">MITRA KIM <br> SMART PEOPLE</p>
 
       <div class="quotes">
         "Peluang Untuk Menjadi Pengusaha Tanpa Harus Keluar Rumah. Usaha Anda Ada Di Genggaman Anda"
@@ -18,15 +18,25 @@
 
       <v-ons-button>Daftar Sekarang</v-ons-button>
     </div>
-  
   </v-ons-page>
 </template>
 
 <script>
+import { mapMutations } from 'Vuex'
 // @ is an alias to /src
-
 export default {
-  name: 'Home'
+  name: 'Home',
+  data () {
+    return {
+      modal: true
+    }
+  },
+  methods: {
+    ...mapMutations(['LOADING_SYNC'])
+  },
+  mounted(){
+    this.LOADING_SYNC(false)
+  }
 
 }
 </script>

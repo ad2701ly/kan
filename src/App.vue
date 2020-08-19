@@ -1,10 +1,29 @@
 <template>
-  <div id="app">
+  <v-ons-page id="app">
+    <NavigasiAtas/>
     <div class="container">
       <router-view/>
     </div>
-  </div>
+    <v-ons-modal :visible="this.$store.state.loading">
+       <v-ons-icon icon="fa-spinner" spin></v-ons-icon>
+      <p>Loading</p>
+    </v-ons-modal>
+  </v-ons-page>
 </template>
+
+<script>
+export default {
+  components:{
+    NavigasiAtas
+  },
+  data () {
+    return {
+      modal: false
+    }
+  }
+}
+</script>
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Noto+Sans+JP:wght@500&family=Nunito+Sans&display=swap');
@@ -37,6 +56,8 @@
 .judul{
   font-family: 'Lato', sans-serif;
   font-size: 1.5em;
+
+
 }
 .subjudul{
   font-family: 'Noto Sans JP', sans-serif;

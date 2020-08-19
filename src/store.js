@@ -4,21 +4,15 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: {
-    splitter: {
-      namespaced: true,
-      state: {
-        open: false
-      },
-      mutations: {
-        toggle (state, shouldOpen) {
-          if (typeof shouldOpen === 'boolean') {
-            state.open = shouldOpen
-          } else {
-            state.open = !state.open
-          }
-        }
-      }
+  state: {
+    modal: false,
+    loading: true,
+    host: '192.168.1.100'
+  },
+
+  mutations: {
+    LOADING_SYNC (state, payload) {
+      state.loading = payload
     }
   }
 })
