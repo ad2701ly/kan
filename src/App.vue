@@ -1,5 +1,5 @@
 <template>
-  <v-ons-page id="app">
+  <v-ons-page id="app" modifier="template">
     <NavigasiAtas />
     <div class="content">
       <router-view/>
@@ -8,14 +8,21 @@
        <v-ons-icon icon="fa-spinner" spin></v-ons-icon>
       <p>Loading</p>
     </v-ons-modal>
+
+    <Persetujuan />
+    <Pendaftaran/>
   </v-ons-page>
 </template>
 
 <script>
 import NavigasiAtas from './components/NavigasiAtas'
+import Persetujuan from './components/persetujuan'
+import Pendaftaran from './components/pendaftaran'
 export default {
   components: {
-    NavigasiAtas
+    NavigasiAtas,
+    Persetujuan,
+    Pendaftaran
   },
   data () {
     return {
@@ -49,10 +56,6 @@ export default {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
-.container{
-  
- margin: 1em;
-}
 
 .judul{
   font-family: 'Lato', sans-serif;
@@ -63,6 +66,9 @@ export default {
 .subjudul{
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.2em;
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .isi{

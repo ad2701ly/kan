@@ -16,7 +16,7 @@
         Saatnya anda hidup mandiri dengan penghasilan sendiri
       </div>
 
-      <v-ons-button>Daftar Sekarang</v-ons-button>
+      <v-ons-button @click="PERSETUJUAN_DIALOG(true)">Daftar Sekarang</v-ons-button>
     </div>
   </v-ons-page>
 </template>
@@ -28,11 +28,11 @@ export default {
   name: 'Home',
   data () {
     return {
-      modal: true
+      dialog: true
     }
   },
   methods: {
-    ...mapMutations(['LOADING_SYNC'])
+    ...mapMutations(['LOADING_SYNC', 'PERSETUJUAN_DIALOG'])
   },
   mounted () {
     this.LOADING_SYNC(false)
